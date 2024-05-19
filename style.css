@@ -1,0 +1,32 @@
+html {
+    /* background-color: darkgreen; */
+    background-image: url("background.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: blue;
+}
+
+h1 {
+    text-align: center;
+}
+
+#gameBoard {
+    display: flex;
+}
+
+.playerBoard {
+    width: 50%;
+    text-align: center;
+}
+
+.buttons {
+    display: block;
+}
+
+.pic {
+    display: block;
+    margin: auto;
+    max-width: 250px;
+    max-height: 250px;
+}

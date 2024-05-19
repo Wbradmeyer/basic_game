@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Declan's Game</h1>
+    <div id="gameBoard">
+        <div class="playerBoard">
+            <h2>Name: <span id="player1Name"></span></h2>
+            <p>Weapon: <span id="player1Weapon"></span></p>
+            <p>Health: <span id="player1Health"></span></p>
+            <button onclick="getWeapon(weapon1, player1)">Get Fire Sword</button>
+            <button onclick="getWeapon(weapon2, player1)">Get TNT</button>
+            <button onclick="player1.attack(player2, player1.weapon)">ATTACK!!!</button>
+            <img src="lakitu_super_mario_bros_icon_232945.png" alt="lakitu pic" class="pic">
+        </div>
+        <div class="playerBoard">
+            <h2>Name: <span id="player2Name"></span></h2>
+            <p>Weapon: <span id="player2Weapon"></span></p>
+            <p>Health: <span id="player2Health"></span></p>
+            <button onclick="getWeapon(weapon1, player2)">Get Fire Sword</button>
+            <button onclick="getWeapon(weapon2, player2)">Get TNT</button>
+            <button onclick="player2.attack(player1, player2.weapon)">ATTACK!!!</button>
+            <img src="roy_koopa.webp" alt="roy pic" class="pic">
+        </div>
+    </div>
+</body>
+</html>
