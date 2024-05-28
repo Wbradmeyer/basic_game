@@ -24,7 +24,7 @@ h1 {
     display: block;
 }
 
-.pic {
+.pic1, .pic2 {
     display: block;
     margin: auto;
     max-width: 250px;
