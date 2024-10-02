@@ -40,6 +40,10 @@ potion2 = {
     ability: "Makes it so they can't see ya!"
 }
 
+potion3 = {
+    name: 'Health Potion',
+    ability: 'Restores your health'
+}
 
 function setGameBoard(){
     player1Name.innerText = player1.name
