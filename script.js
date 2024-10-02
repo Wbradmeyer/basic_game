@@ -8,41 +8,51 @@ weapon2 = {
     damage: 20
 }
 
+potion1 = {
+    name: 'Speed Potion',
+    ability: 'Makes you go really fast!',
+    restore: 5
+}
+
+potion2 = {
+    name: 'Invisibility Potion',
+    ability: "Makes it so they can't see ya!",
+    restore: 10
+}
+
+potion3 = {
+    name: 'Health Potion',
+    ability: 'Restores your health',
+    restore: 20
+}
+
 player1 = {
     name: 'Francisco',
     weapon: weapon1,
-    potion: {},
+    potion: potion1,
     health: 100,
     attack: function(enemy, weapon){
         enemy.health -= weapon.damage
         setGameBoard()
+    },
+    restoreHealth: function(self, potion){
+        self.health += potion.restore
     }
 }
 
 player2 = {
     name: 'Bupkis',
     weapon: weapon1,
-    potion: {},
+    potion: potion1,
     health: 100,
     attack: function(enemy, weapon){
         enemy.health -= weapon.damage
         setGameBoard()
+    },
+    restoreHealth: function(self, potion){
+        self.health += potion.restore
+        setGameBoard()
     }
-}
-
-potion1 = {
-    name: 'Speed Potion',
-    ability: 'Makes you go really fast!'
-}
-
-potion2 = {
-    name: 'Invisibility Potion',
-    ability: "Makes it so they can't see ya!"
-}
-
-potion3 = {
-    name: 'Health Potion',
-    ability: 'Restores your health'
 }
 
 function setGameBoard(){
@@ -64,6 +74,11 @@ function setGameBoard(){
 
 function getWeapon(weapon, player){
     player.weapon = weapon
+    setGameBoard()
+}
+
+function getPotion(potion, player){
+    player.potion = potion
     setGameBoard()
 }
 
