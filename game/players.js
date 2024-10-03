@@ -1,22 +1,22 @@
 class Player {
     constructor(name) {
         this.name = name
-        this.weapons = []
-        this.potions = []
+        this.weapon = {}
+        this.potion = {}
         this.health = 100
         this.attack = function(enemy){
-            enemy.health -= weapon.damage
+            enemy.health -= this.weapon.damage
         }
-        this.restoreHealth = function(self){
-            self.health += potion.restore
+        this.restoreHealth = function(){
+            this.health += this.potion.restore
         }
     }
 
     getWeapon(weapon){
-        this.weapons.push(weapon)
+        this.weapon = weapon
     }
 
     getPotion(potion){
-        this.potions.push(potion)
+        this.potion = potion
     }
 }
