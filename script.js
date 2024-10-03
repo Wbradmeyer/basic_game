@@ -1,4 +1,4 @@
-import { Player } from "./game/players"
+// import { Player } from "./game/players"
 
 weapon1 = {
     name: 'Fire Sword',
@@ -26,6 +26,31 @@ potion3 = {
     name: 'Health Potion',
     ability: 'Restores your health',
     restore: 20
+}
+
+class Player {
+    constructor(name) {
+        this.name = name
+        this.weapon = {}
+        this.potion = {}
+        this.health = 100
+    }
+    attack(enemy){
+        enemy.health -= this.weapon.damage
+        setGameBoard()
+    }
+    restoreHealth(){
+        this.health += this.potion.restore
+        setGameBoard()
+    }
+    getWeapon(weapon){
+        this.weapon = weapon
+        setGameBoard()
+    }
+    getPotion(potion){
+        this.potion = potion
+        setGameBoard()
+    }
 }
 
 const player1 = new Player('Francisco')
@@ -61,7 +86,7 @@ const player2 = new Player('Bupkis')
 //     }
 // }
 
-function setGameBoard(){
+export function setGameBoard(){
     player1Name.innerText = player1.name
     player1Weapon.innerText = player1.weapon.name
     player2Name.innerText = player2.name
@@ -78,14 +103,14 @@ function setGameBoard(){
     }
 }
 
-function getWeapon(weapon, player){
-    player.weapon = weapon
-    setGameBoard()
-}
+// function getWeapon(weapon, player){
+//     player.weapon = weapon
+//     setGameBoard()
+// }
 
-function getPotion(potion, player){
-    player.potion = potion
-    setGameBoard()
-}
+// function getPotion(potion, player){
+//     player.potion = potion
+//     setGameBoard()
+// }
 
 setGameBoard()
