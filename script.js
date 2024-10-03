@@ -1,14 +1,16 @@
 // import { Player } from "./game/players"
 
-weapon1 = {
-    name: 'Fire Sword',
-    damage: 10
+class Weapon {
+    constructor(name, damage) {
+        this.name = name
+        this.damage = damage
+    }
 }
 
-weapon2 = {
-    name: 'TNT',
-    damage: 20
-}
+weapon1 = new Weapon('Fire Sword', 10)
+
+weapon2 = new Weapon('TNT', 20)
+
 
 potion1 = {
     name: 'Speed Potion',
@@ -86,7 +88,7 @@ const player2 = new Player('Bupkis')
 //     }
 // }
 
-export function setGameBoard(){
+function setGameBoard(){
     player1Name.innerText = player1.name
     player1Weapon.innerText = player1.weapon.name
     player2Name.innerText = player2.name

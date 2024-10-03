@@ -15,8 +15,8 @@
             <p>Weapon: <span id="player1Weapon"></span></p>
             <p>Health: <span id="player1Health"></span></p>
             <div>
-                <button onclick="getWeapon(weapon1, player1)">Get Fire Sword</button>
-                <button onclick="getWeapon(weapon2, player1)">Get TNT</button>
+                <button onclick="player1.getWeapon(weapon1)">Get Fire Sword</button>
+                <button onclick="player1.getWeapon(weapon2)">Get TNT</button>
                 <button onclick="player1.attack(player2, player1.weapon)">ATTACK!!!</button>
             </div>
             <div>
@@ -32,8 +32,8 @@
             <p>Weapon: <span id="player2Weapon"></span></p>
             <p>Health: <span id="player2Health"></span></p>
             <div>
-                <button onclick="getWeapon(weapon1, player2)">Get Fire Sword</button>
-                <button onclick="getWeapon(weapon2, player2)">Get TNT</button>
+                <button onclick="player2.getWeapon(weapon1)">Get Fire Sword</button>
+                <button onclick="player2.getWeapon(weapon2)">Get TNT</button>
             </div>
             <div>
                 <button onclick="getPotion(potion1, player2)">Health Potion</button>
