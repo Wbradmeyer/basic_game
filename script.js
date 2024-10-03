@@ -7,28 +7,24 @@ class Weapon {
     }
 }
 
-weapon1 = new Weapon('Fire Sword', 10)
+const weapon1 = new Weapon('Fire Sword', 10)
 
-weapon2 = new Weapon('TNT', 20)
+const weapon2 = new Weapon('TNT', 20)
 
 
-potion1 = {
-    name: 'Speed Potion',
-    ability: 'Makes you go really fast!',
-    restore: 5
+class Potion {
+    constructor(name, restore){
+        this.name = name
+        this.restore = restore
+    }
 }
 
-potion2 = {
-    name: 'Invisibility Potion',
-    ability: "Makes it so they can't see ya!",
-    restore: 10
-}
+const potion1 = new Potion('Potion', 20)
 
-potion3 = {
-    name: 'Health Potion',
-    ability: 'Restores your health',
-    restore: 20
-}
+const potion2 = new Potion('Super Potion', 40)
+
+const potion3 = new Potion('Hyper Potion', 60)
+
 
 class Player {
     constructor(name) {
