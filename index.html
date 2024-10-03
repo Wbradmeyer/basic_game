@@ -14,16 +14,19 @@
             <h2>Name: <span id="player1Name"></span></h2>
             <p>Weapon: <span id="player1Weapon"></span></p>
             <p>Health: <span id="player1Health"></span></p>
+            <p>Potion: <span id="player1Potion"></span></p>
             <div>
                 <button onclick="player1.getWeapon(weapon1)">Get Fire Sword</button>
                 <button onclick="player1.getWeapon(weapon2)">Get TNT</button>
-                <button onclick="player1.attack(player2, player1.weapon)">ATTACK!!!</button>
             </div>
             <div>
-                <button onclick="getPotion(potion1, player1)">Health Potion</button>
-                <button onclick="getPotion(potion2, player1)">Health Potion</button>
-                <button onclick="getPotion(potion3, player1)">Health Potion</button>
-                <button onclick="player1.restoreHealth(player1, player1.potion)">Use Potion</button>
+                <button onclick="player1.getPotion(potion1)">Health Potion</button>
+                <button onclick="player1.getPotion(potion2)">Health Potion</button>
+                <button onclick="player1.getPotion(potion3)">Health Potion</button>
+            </div>
+            <div>
+                <button onclick="player1.attack(player2, player1.weapon)">ATTACK!!!</button>
+                <button onclick="player1.restoreHealth()">Use Potion</button>
             </div>
             <img src="lakitu_super_mario_bros_icon_232945.png" alt="lakitu pic" class="pic1">
         </div>
@@ -31,18 +34,19 @@
             <h2>Name: <span id="player2Name"></span></h2>
             <p>Weapon: <span id="player2Weapon"></span></p>
             <p>Health: <span id="player2Health"></span></p>
+            <p>Potion: <span id="player2Potion"></span></p>
             <div>
                 <button onclick="player2.getWeapon(weapon1)">Get Fire Sword</button>
                 <button onclick="player2.getWeapon(weapon2)">Get TNT</button>
             </div>
             <div>
-                <button onclick="getPotion(potion1, player2)">Health Potion</button>
-                <button onclick="getPotion(potion2, player2)">Health Potion</button>
-                <button onclick="getPotion(potion3, player2)">Health Potion</button>
+                <button onclick="player2.getPotion(potion1)">Health Potion</button>
+                <button onclick="player2.getPotion(potion2)">Health Potion</button>
+                <button onclick="player2.getPotion(potion3)">Health Potion</button>
             </div>
             <div>
                 <button onclick="player2.attack(player1, player2.weapon)">ATTACK!!!</button>
-                <button onclick="player2.restoreHealth(player2, player2.potion)">Use Potion</button>
+                <button onclick="player2.restoreHealth()">Use Potion</button>
             </div>
             <img src="roy_koopa.webp" alt="roy pic" class="pic2">
         </div>
