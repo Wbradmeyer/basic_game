@@ -49,8 +49,11 @@ class Player {
 const player1 = new Player('Francisco')
 const player2 = new Player('Bupkis')
 
+let gameOver = false
 
 function setGameBoard(){
+    if(gameOver) return
+
     player1Name.innerText = player1.name
     if(!player1.weapon){
         player1Weapon.innerText = 'None'
@@ -81,8 +84,10 @@ function setGameBoard(){
 
     if(player1.health <= 0){
         player1Health.innerText = `${player1.name} is no more...`
+        gameOver = true
     } else if(player2.health <= 0){
         player2Health.innerText = `${player2.name} is no more...`
+        gameOver = true
     } else {
         player1Health.innerText = player1.health
         player2Health.innerText = player2.health
