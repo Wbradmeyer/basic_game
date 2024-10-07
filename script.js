@@ -85,9 +85,11 @@ function setGameBoard(){
     if(player1.health <= 0){
         player1Health.innerText = `${player1.name} is no more...`
         gameOver = true
+        document.getElementById('gameOver').style.visibility = 'visible'
     } else if(player2.health <= 0){
         player2Health.innerText = `${player2.name} is no more...`
         gameOver = true
+        document.getElementById('gameOver').style.visibility = 'visible'
     } else {
         player1Health.innerText = player1.health
         player2Health.innerText = player2.health
