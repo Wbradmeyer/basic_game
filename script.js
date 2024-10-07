@@ -49,34 +49,6 @@ class Player {
 const player1 = new Player('Francisco')
 const player2 = new Player('Bupkis')
 
-// player1 = {
-//     name: 'Francisco',
-//     weapon: weapon1,
-//     potion: potion1,
-//     health: 100,
-//     attack: function(enemy, weapon){
-//         enemy.health -= weapon.damage
-//         setGameBoard()
-//     },
-//     restoreHealth: function(self, potion){
-//         self.health += potion.restore
-//     }
-// }
-
-// player2 = {
-//     name: 'Bupkis',
-//     weapon: weapon1,
-//     potion: potion1,
-//     health: 100,
-//     attack: function(enemy, weapon){
-//         enemy.health -= weapon.damage
-//         setGameBoard()
-//     },
-//     restoreHealth: function(self, potion){
-//         self.health += potion.restore
-//         setGameBoard()
-//     }
-// }
 
 function setGameBoard(){
     player1Name.innerText = player1.name
@@ -109,24 +81,12 @@ function setGameBoard(){
 
     if(player1.health <= 0){
         player1Health.innerText = `${player1.name} is no more...`
-        // player2Health.innerText = player2.health
     } else if(player2.health <= 0){
-        // player1Health.innerText = player1.health
         player2Health.innerText = `${player2.name} is no more...`
     } else {
         player1Health.innerText = player1.health
         player2Health.innerText = player2.health
     }
 }
-
-// function getWeapon(weapon, player){
-//     player.weapon = weapon
-//     setGameBoard()
-// }
-
-// function getPotion(potion, player){
-//     player.potion = potion
-//     setGameBoard()
-// }
 
 setGameBoard()
