@@ -33,7 +33,12 @@ class Player {
         setGameBoard()
     }
     restoreHealth(){
-        this.health += this.potion.restore
+        if(this.health == 100) return
+        else if((this.health + this.potion.restore) > 100){
+            this.health = 100
+        } else {
+            this.health += this.potion.restore
+        }
         setGameBoard()
     }
     getWeapon(weapon){
