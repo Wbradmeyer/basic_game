@@ -25,6 +25,18 @@ h1 {
     display: block;
 }
 
+button {
+    background-color: lightblue;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-size: 20pt;
+    padding: 5px;
+    margin: 5px;
+}
+button:hover {
+    background-color: lightgreen;
+}
+
 .pic1, .pic2 {
     display: block;
     margin: auto;
