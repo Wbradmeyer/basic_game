@@ -17,7 +17,7 @@ export class Player {
     }
     
     getWeapon(weapon){
-        this.this.weapon = weapon
+        this.weapon = weapon
         this.setGameBoard()
     }
 

@@ -111,4 +111,18 @@ function setGameBoard(){
 const player1 = new Player('Francisco', setGameBoard)
 const player2 = new Player('Bupkis', setGameBoard)
 
+// Attach players to the global `window` object
+window.player1 = player1;
+window.player2 = player2;
+
+// Attach weapons and potions to the global `window` object (optional, if needed in HTML)
+window.weapon1 = weapon1;
+window.weapon2 = weapon2;
+window.weapon3 = weapon3;
+window.weapon4 = weapon4;
+window.potion1 = potion1;
+window.potion2 = potion2;
+window.potion3 = potion3;
+window.potion4 = potion4;
+
 setGameBoard()
