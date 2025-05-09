@@ -7,6 +7,8 @@ class Weapon {
 
 const weapon1 = new Weapon('Fire Sword', 10)
 const weapon2 = new Weapon('TNT', 20)
+const weapon3 = new Weapon('Flame Thrower', 30)
+const weapon4 = new Weapon('Laser', 40)
 
 
 class Potion {
@@ -18,7 +20,8 @@ class Potion {
 
 const potion1 = new Potion('Potion', 20)
 const potion2 = new Potion('Super Potion', 40)
-const potion3 = new Potion('Hyper Potion', 60)
+const potion3 = new Potion('Hyper Potion', 60) 
+const potion4 = new Potion('Ultra Potion', 80)
 
 
 class Player {
