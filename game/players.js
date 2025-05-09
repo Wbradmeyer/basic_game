@@ -1,29 +1,28 @@
-import { setGameBoard } from "../script"
-
 export class Player {
-    constructor(name) {
+    constructor(name, setGameBoardCallback) {
         this.name = name
-        this.weapon = {}
-        this.potion = {}
+        this.weapon = undefined
+        this.potion = undefined
         this.health = 100
+        this.setGameBoard = setGameBoardCallback
     }
     
     attack(enemy){
         enemy.health -= this.weapon.damage
-        setGameBoard()
+        this.setGameBoard()
     }
     restoreHealth(){
         this.health += this.potion.restore
-        setGameBoard()
+        this.setGameBoard()
     }
     
     getWeapon(weapon){
-        this.weapon = weapon
-        setGameBoard()
+        this.this.weapon = weapon
+        this.setGameBoard()
     }
 
     getPotion(potion){
         this.potion = potion
-        setGameBoard()
+        this.setGameBoard()
     }
 }
