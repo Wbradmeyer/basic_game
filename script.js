@@ -2,12 +2,6 @@ import { Weapon } from './game/weapons.js'
 import { Potion } from './game/potions.js'
 import { Player } from './game/players.js'
 
-// class Weapon {
-//     constructor(name, damage) {
-//         this.name = name
-//         this.damage = damage
-//     }
-// }
 
 const weapon1 = new Weapon('Fire Sword', 10)
 const weapon2 = new Weapon('TNT', 20)
@@ -15,51 +9,11 @@ const weapon3 = new Weapon('Flame Thrower', 30)
 const weapon4 = new Weapon('Laser', 40)
 
 
-// class Potion {
-//     constructor(name, restore){
-//         this.name = name
-//         this.restore = restore
-//     }
-// }
-
 const potion1 = new Potion('Potion', 20)
 const potion2 = new Potion('Super Potion', 40)
 const potion3 = new Potion('Hyper Potion', 60) 
 const potion4 = new Potion('Ultra Potion', 80)
 
-
-// class Player {
-//     constructor(name) {
-//         this.name = name
-//         this.weapon = undefined
-//         this.potion = undefined
-//         this.health = 100
-//     }
-//     attack(enemy){
-//         enemy.health -= this.weapon.damage
-//         setGameBoard()
-//     }
-//     restoreHealth(){
-//         if(this.health == 100) return
-//         else if((this.health + this.potion.restore) > 100){
-//             this.health = 100
-//         } else {
-//             this.health += this.potion.restore
-//         }
-//         setGameBoard()
-//     }
-//     getWeapon(weapon){
-//         this.weapon = weapon
-//         setGameBoard()
-//     }
-//     getPotion(potion){
-//         this.potion = potion
-//         setGameBoard()
-//     }
-// }
-
-// const player1 = new Player('Francisco')
-// const player2 = new Player('Bupkis')
 
 let gameOver = false
 
