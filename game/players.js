@@ -8,6 +8,7 @@ export class Player {
     }
     
     attack(enemy){
+        // if weapon accuracy hits, deal damage, else skip
         enemy.health -= this.weapon.damage
         this.setGameBoard()
     }
