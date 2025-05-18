@@ -39,19 +39,25 @@ export class Player {
         logElement.scrollTop = logElement.scrollHeight;
     }
 
-    restoreHealth(){
-        // Increase the player's health by the restore value of the equipped potion
-        this.health += this.potion.restore
-        this.setGameBoard()
-    }
-    
-    getWeapon(weapon){
-        this.weapon = weapon // Assign the weapon to the player
-        this.setGameBoard()
+    getWeapon(weapon) {
+        this.weapon = weapon; // Assign the weapon to the player
+        const message = `${this.name} picked up a ${weapon.name}!`; // Log message for picking up a weapon
+        this.updateGameLog(message); // Add the message to the game log
+        this.setGameBoard(); // Update the game board
     }
 
-    getPotion(potion){
-        this.potion = potion // Assign the weapon to the player
-        this.setGameBoard()
+    getPotion(potion) {
+        this.potion = potion; // Assign the potion to the player
+        const message = `${this.name} picked up a ${potion.name}!`; // Log message for picking up a potion
+        this.updateGameLog(message); // Add the message to the game log
+        this.setGameBoard(); // Update the game board
+    }
+
+    restoreHealth() {
+        // Increase the player's health by the restore value of the equipped potion
+        this.health += this.potion.restore;
+        const message = `${this.name} restored ${this.potion.restore} health using a ${this.potion.name}!`; // Log message for restoring health
+        this.updateGameLog(message); // Add the message to the game log
+        this.setGameBoard(); // Update the game board
     }
 }
