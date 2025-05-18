@@ -14,6 +14,7 @@
             GAME OVER
         </div>
         <div class="playerBoard">
+            <!-- Player 1 details -->
             <h2>Name: <span id="player1Name"></span></h2>
             <p>Weapon: <span id="player1Weapon"></span></p>
             <p>Health: <span id="player1Health"></span></p>
@@ -31,12 +32,13 @@
                 <button onclick="player1.getPotion(potion4)">Ultra Potion</button>
             </div>
             <div>
-                <button onclick="player1.attack(player2, player1.weapon)">ATTACK!!!</button>
+                <button onclick="player1.attack(player2)">ATTACK!!!</button>
                 <button onclick="player1.restoreHealth()">Use Potion</button>
             </div>
             <img src="lakitu_super_mario_bros_icon_232945.png" alt="lakitu pic" class="pic1">
         </div>
         <div class="playerBoard">
+            <!-- Player 2 details -->
             <h2>Name: <span id="player2Name"></span></h2>
             <p>Weapon: <span id="player2Weapon"></span></p>
             <p>Health: <span id="player2Health"></span></p>
@@ -54,11 +56,13 @@
                 <button onclick="player2.getPotion(potion4)">Ultra Potion</button>
             </div>
             <div>
-                <button onclick="player2.attack(player1, player2.weapon)">ATTACK!!!</button>
+                <button onclick="player2.attack(player1)">ATTACK!!!</button>
                 <button onclick="player2.restoreHealth()">Use Potion</button>
             </div>
             <img src="roy_koopa.webp" alt="roy pic" class="pic2">
         </div>
+        <!-- Single log area for all messages -->
+        <div id="gameLog" class="log"></div>
     </div>
 </body>
 </html>
