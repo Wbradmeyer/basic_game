@@ -8,22 +8,37 @@ export class Player {
         this.setGameBoard = setGameBoardCallback
     }
     
-    attack(enemy){
+    attack(enemy) {
         // Generate a random number between 1 and 100
-        const hitChance = Math.floor(Math.random() * 100) + 1
+        const hitChance = Math.random() * 100;
 
-        // if the hit chance is less than or equal to the weapon's accuracy
-        if(hitChance <= this.weapon.accuracy){
-            // The attack is successful, and the enemy's health is reduced by the weapon's damage
-            enemy.health -= this.weapon.damage
-            console.log(`${this.name} attacked ${enemy.name} with ${this.weapon.name} for ${this.weapon.damage} damage!`)
+        // Check if the random number is less than or equal to the weapon's accuracy
+        if (hitChance <= this.weapon.accuracy) {
+            // If the attack hits, reduce the enemy's health
+            enemy.health -= this.weapon.damage;
+            const message = `${this.name} hits ${enemy.name} for ${this.weapon.damage} damage!`;
+            console.log(message);
+            this.updateGameLog(message);
+        } else {
+            // If the attack misses, log a miss message
+            const message = `${this.name} misses the attack!`;
+            console.log(message);
+            this.updateGameLog(message);
         }
-        else {
-            // The attack misses, and the enemy's health remains unchanged
-            console.log(`${this.name} missed the attack!`)
-        }
-        this.setGameBoard()
+
+        // Update the game board after the attack
+        this.setGameBoard();
     }
+
+    updateGameLog(message) {
+        // Get the log area element
+        const logElement = document.getElementById('gameLog');
+        // Append the message to the log area
+        logElement.innerHTML += `<p>${message}</p>`;
+        // Scroll to the bottom of the log area
+        logElement.scrollTop = logElement.scrollHeight;
+    }
+
     restoreHealth(){
         // Increase the player's health by the restore value of the equipped potion
         this.health += this.potion.restore
