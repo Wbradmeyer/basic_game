@@ -71,8 +71,11 @@ button:hover {
 
 /* Style for the log area */
 #gameLog {
+    position: fixed; /* Fix the log to the bottom of the screen */
+    bottom: 20px; /* Distance from the bottom of the screen */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for the element's width */
     width: 80%; /* Adjust width as needed */
-    margin: 20px auto; /* Center horizontally */
     padding: 10px;
     border: 2px solid black;
     background-color: #f9f9f9;
@@ -81,4 +84,5 @@ button:hover {
     text-align: left;
     font-family: Arial, sans-serif;
     font-size: 14px;
+    z-index: 1000; /* Ensure it appears above other elements */
 }
