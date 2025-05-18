@@ -9,9 +9,19 @@ export class Player {
     }
     
     attack(enemy){
-        // if weapon accuracy hits, deal damage, else skip
-        // Reduce the enemy's health by the damage of the player's weapon
-        enemy.health -= this.weapon.damage
+        // Generate a random number between 1 and 100
+        const hitChance = Math.floor(Math.random() * 100) + 1
+
+        // if the hit chance is less than or equal to the weapon's accuracy
+        if(hitChance <= this.weapon.accuracy){
+            // The attack is successful, and the enemy's health is reduced by the weapon's damage
+            enemy.health -= this.weapon.damage
+            console.log(`${this.name} attacked ${enemy.name} with ${this.weapon.name} for ${this.weapon.damage} damage!`)
+        }
+        else {
+            // The attack misses, and the enemy's health remains unchanged
+            console.log(`${this.name} missed the attack!`)
+        }
         this.setGameBoard()
     }
     restoreHealth(){
