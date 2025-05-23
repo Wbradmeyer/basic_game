@@ -18,6 +18,9 @@ const potion4 = new Potion('Ultra Potion', 80)
 // Variable to track the game state
 let gameOver = false
 
+// Variable to track who's turn it is
+let playerTurn = 1
+
 // Function to set the game board with player information
 function setGameBoard(){
     // If the game is over, do not update the board
